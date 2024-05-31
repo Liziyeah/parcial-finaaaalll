@@ -52,7 +52,12 @@ class Dashboard extends HTMLElement {
 		seePosts.innerHTML = '¡Ve a ver las publicaciones creadas!';
 		seePosts.addEventListener('click', () => {
 			dispatch(changeScreen('PUBLISHED'));
+			this.shadowRoot?.appendChild(seePosts);
 		});
+		const see = this.ownerDocument.createElement('button');
+		see.innerHTML = '¡Ve a ver las publicaciones creadas!';
+		see.addEventListener('click', this.submitForm);
+		this.shadowRoot?.appendChild(see);
 
 		const cssDashboard = this.ownerDocument.createElement('style');
 		cssDashboard.innerHTML = styles;
