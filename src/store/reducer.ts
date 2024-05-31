@@ -2,7 +2,7 @@ export const reducer = (currentAction: any, currentState: any) => {
 	const { action, payload } = currentAction;
 
 	switch (action) {
-		case 'navigate':
+		case 'changeScreen':
 			currentState.screen = payload;
 			break;
 	}

@@ -1,6 +1,6 @@
-export const navigate = (screen: any) => {
+export const changeScreen = (screen: any) => {
 	return {
-		action: 'navigate',
+		action: 'changeScreen',
 		payload: screen,
 	};
 };
